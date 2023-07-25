@@ -11,7 +11,7 @@ export function useToDoItem(todo: TodoItem): ToDoItemData {
   const [checked, setChecked] = useState<boolean>(todo.completed || false);
 
   function completeTodoTask(todo: TodoItem) {
-    setChecked((prevState) => !prevState);
+    setChecked((prevState) => (todo.completed = !prevState));
   }
 
   return {
