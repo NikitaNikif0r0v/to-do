@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
-import { TodoItem, UseToDoData } from "./types";
+import { UseToDoData } from "./types";
+import { TodoItem } from "./ToDoItem/types";
 
 const DEFAULT_TODO_DATA: TodoItem[] = [
   { id: 1, text: "Learn React", completed: false },

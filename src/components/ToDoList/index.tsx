@@ -1,8 +1,8 @@
 import s from "./toDoList.module.css";
-import { TodoItem } from "./types";
 import { useTodos } from "./hooks";
 
-import { ItemList } from "../ToDoItem";
+import { ItemList } from "./ToDoItem";
+import { TodoItem } from "./ToDoItem/types";
 
 export function TodoList() {
   const {

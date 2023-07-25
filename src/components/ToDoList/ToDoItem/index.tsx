@@ -1,4 +1,4 @@
-import { ItemListProps } from "../ToDoList/types";
+import { ItemListProps } from "../types";
 import { useToDoItem } from "./hooks";
 
 export function ItemList(props: ItemListProps) {

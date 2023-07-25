@@ -1,8 +1,4 @@
-export interface TodoItem {
-  id: number;
-  text: string;
-  completed: boolean;
-}
+import { TodoItem } from "./ToDoItem/types";
 
 export interface ItemListProps {
   todo: TodoItem;
