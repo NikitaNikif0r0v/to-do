@@ -1,13 +1,13 @@
-import { TodoItem } from './ToDoItem/types';
+import { TodoItemData } from './TodoItem/types';
 
 export interface ItemListProps {
-    todo: TodoItem;
+    todo: TodoItemData;
     handleDelete: (id: number) => void;
-    completeTodoTask: (todo: TodoItem) => void;
+    completeTodoTask: (todo: TodoItemData) => void;
 }
 
 export interface UseToDoData {
-    todos: TodoItem[];
+    todos: TodoItemData[];
     filter: string;
     setFilter: (filter: string) => void;
     handleAddTodo: (text: string) => void;
@@ -15,5 +15,5 @@ export interface UseToDoData {
     newItemText: string;
     newItemTextChangeNahdler: (e: React.ChangeEvent<HTMLInputElement>) => void;
     handleInputKeyPress: (e: React.KeyboardEvent<HTMLInputElement>) => void;
-    completeTodoTask: (todo: TodoItem) => void;
+    completeTodoTask: (todo: TodoItemData) => void;
 }

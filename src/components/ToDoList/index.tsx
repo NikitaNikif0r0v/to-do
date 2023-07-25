@@ -1,8 +1,8 @@
 import s from './toDoList.module.css';
 import { useTodos } from './hooks';
 
-import { ItemList } from './ToDoItem';
-import { TodoItem } from './ToDoItem/types';
+import { TodoItem } from './TodoItem';
+import { TodoItemData } from './TodoItem/types';
 
 export function TodoList() {
     const {
@@ -34,8 +34,8 @@ export function TodoList() {
                 </button>
 
                 <ul>
-                    {todos.map((todo: TodoItem) => (
-                        <ItemList
+                    {todos.map((todo: TodoItemData) => (
+                        <TodoItem
                             key={todo.id}
                             completeTodoTask={completeTodoTask}
                             todo={todo}

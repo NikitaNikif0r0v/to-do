@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react';
 import { UseToDoData } from './types';
-import { TodoItem } from './ToDoItem/types';
+import { TodoItemData } from './TodoItem/types';
 
-const DEFAULT_TODO_DATA: TodoItem[] = [
+const DEFAULT_TODO_DATA: TodoItemData[] = [
     { id: 1, text: 'Learn React', completed: false },
     { id: 2, text: 'Learn TypeScript', completed: false },
     { id: 3, text: 'Learn Next.js', completed: false },
@@ -49,7 +49,7 @@ export function useTodos(): UseToDoData {
         }
     };
 
-    function completeTodoTask(todo: TodoItem) {
+    function completeTodoTask(todo: TodoItemData) {
         setTodos((prevTodos) => {
             const newTodos = prevTodos.map((prevTodo) => {
                 if (prevTodo.id === todo.id) {

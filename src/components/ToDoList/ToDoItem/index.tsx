@@ -1,6 +1,6 @@
 import { ItemListProps } from '../types';
 
-export function ItemList(props: ItemListProps) {
+export function TodoItem(props: ItemListProps) {
     const { todo, handleDelete, completeTodoTask } = props;
 
     return (
