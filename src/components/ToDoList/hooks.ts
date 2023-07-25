@@ -23,6 +23,9 @@ export function useTodos(): UseToDoData {
   }, [todos, filter]);
 
   function handleAddTodo(text: string) {
+    if (!text) {
+      return;
+    }
     setTodos((prevTodos) => {
       const newTodo = {
         id: uuid(),
