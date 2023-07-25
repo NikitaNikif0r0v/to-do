@@ -1,20 +1,13 @@
-import { ItemListProps } from "../types";
-import { useToDoItem } from "./hooks";
+import { ItemListProps } from '../types';
 
 export function ItemList(props: ItemListProps) {
-  const { todo, handleDelete } = props;
-  const { checked, completeTodoTask } = useToDoItem(todo);
+    const { todo, handleDelete, completeTodoTask } = props;
 
-  return (
-    <li key={todo.id}>
-      <input
-        type="checkbox"
-        checked={checked}
-        onChange={() => completeTodoTask(todo)}
-        id="itemStatus"
-      />
-      <label htmlFor="itemStatus">{todo.text}</label>
-      <button onClick={() => handleDelete}>Delete</button>
-    </li>
-  );
+    return (
+        <li key={todo.id}>
+            <input type='checkbox' checked={todo.completed} onChange={() => completeTodoTask(todo)} id='itemStatus' />
+            <label htmlFor='itemStatus'>{todo.text}</label>
+            <button onClick={() => handleDelete}>Delete</button>
+        </li>
+    );
 }
